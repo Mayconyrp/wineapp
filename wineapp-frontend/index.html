@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="script.js"></script>
+
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileImage" content="assets/img/icon_144.png">
+    <meta name="msapplication-TileColor" content="#31506F">
+    <meta name="theme-color" content="#4D5360" />
+    <link rel="shortcut icon" sizes="192x192" href="./assets/icones/android-chrome-192x192.png">
+    <link rel="shortcut icon" sizes="128x128" href="./assets//icones/android-chrome-128x128.png">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="PWA Teste">
+    <link rel="apple-touch-icon" href="assets/img/icon_144.png">
+    <link rel="apple-touch-icon" href="./assets/icones/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets//icones/android-chrome-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icones/android-chrome-180x180.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="./assets/icones/android-chrome-167x167.png">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="assets/img/ios/ipad.png" sizes="3200x4267" rel="apple-touch-startup-image" />
+    <link href="assets/img/ios/ipadpro.png" sizes="3475x4633" rel="apple-touch-startup-image" />
+    <link href="assets/img/ios/ipadpro2.png" sizes="4267x5692" rel="apple-touch-startup-image" />
+    <link href="assets/img/ios/Iphone6Plus.png" sizes="2588x4600" rel="apple-touch-startup-image" />
+    <link href="assets/img/ios/Iphone7.png" sizes="1563x2779" rel="apple-touch-startup-image" />
+    <link href="assets/img/ios/IphoneSE-05.png" sizes="1333x2367" rel="apple-touch-startup-image" />
+    <link href="assets/img/ios/IphoneX-05.png" sizes="2344x5075" rel="apple-touch-startup-image" />
+
+    <link rel="icon" type="image/png" href="./assets/icones/android-chrome-512x512.png">
+
+
+    <title>Login WineApp</title>
+</head>
+
+<body>
+    <main>
+        <div class="content">
+
+            <div class="container">
+                <div class="cont_folhas">
+                    <img src="./assets/folhas.png" alt="folhasdevinheira" class="folhas folhas_esquerda">
+                    <img src="./assets/folhas.png" alt="folhasdevinheira"
+                        class="folhas folhas_esquerda folhas_opacidade">
+                </div>
+                <div class="card">
+                    <div class="img_logo">
+                        <img class="logo" src="./assets/LogoWineYardsAPP.png" alt="">
+                    </div>
+                    <div class="imputs">
+                        <!--<form class="form" action="/home" method="post">-->
+                        <div class="input-container">
+                            <input type="text" id="cnpj" name="cnpj" placeholder="CNPJ" class="text-input">
+
+                            <input type="text" id="password" name="password" placeholder="SENHA" class="text-input">
+                            <p id="forgot_password" class="forgotpassword">Esqueceu a senha?</p>
+
+                            <button class="btn"><a class="ancora" href="home.html">Login</a></button>
+                            <a class="junte-se" href="cadastro.html">Ainda não é
+                                membro? <span>Junte-se agora!</span></a>
+
+                        </div>
+                        <!--</form>>-->
+
+                        </form>
+
+
+                    </div>
+                </div>
+                <class class="cont_folhas">
+                    <img src="./assets/folhas.png" alt="folhasdevinheira" class="folhas folhas_opacidade folhas_rotate">
+                    <img src="./assets/folhas.png" alt="folhasdevinheira" class="folhas folhas_rotate">
+                </class>
+            </div>
+
+        </div>
+    </main>
+
+
+
+
+
+
+    <script>
+        let newWorker;
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/service-worker.js').then(reg => {
+            reg.addEventListener('updatefound', () => {
+              // A wild service worker has appeared in reg.installing!
+              newWorker = reg.installing;
+              newWorker.addEventListener('statechange', () => {
+                // Has network.state changed?
+                switch (newWorker.state) {
+                  case 'installed':
+                    if (navigator.serviceWorker.controller) {
+                      // new update available
+                      showUpdateBar();
+                    }
+                    // No update available
+                    break;
+                }
+              });
+            });
+          });
+          let refreshing;
+          navigator.serviceWorker.addEventListener('controllerchange', function () {
+            if (refreshing) return;
+            window.location.reload();
+            refreshing = true;
+          });
+        }
+      </script>
+    
+</body>
+
+</html>

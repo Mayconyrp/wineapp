@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Cadastre-se</title>
+</head>
+
+<body>
+    <main>
+        <div class="content">
+
+            <div class="container">
+                <div class="cont_folhas">
+                    <img src="./assets/folhas.png" alt="folhasdevinheira" class="folhas folhas_esquerda">
+                    <img src="./assets/folhas.png" alt="folhasdevinheira"
+                        class="folhas folhas_esquerda folhas_opacidade">
+                </div>
+                <div class="card2">
+                    <div class="img_logo">
+                        <img class="logo" src="./assets/LogoWineYardsAPP.png" alt="">
+                    </div>
+                    <div class="imputs">
+                       <!--<form class="form" action="/usuarios" method="POST">---> 
+                            <div class="input-container2">
+                                <input type="text" id="nome_vinicola" name="nome_vinicola"
+                                    placeholder="Nome da Vinicola" class="text-input" >
+                                <input type="text" id="cnpj" name="cnpj" placeholder="CNPJ" class="text-input" >
+                                <input type="email" id="email" name="email" placeholder="Email" class="text-input"
+                                    >
+                                <input type="text" id="telefone_vinicola" name="telefone_vinicola"
+                                    placeholder="Telefone" class="text-input" >
+                                <input type="password" id="password" name="password" placeholder="SENHA"
+                                    class="text-input" >
+
+
+                                <p id="forgot_password" class="forgotpassword">Esqueceu a senha?</p>
+
+                                <button class="btn" onclick="cadastrarUsuario()"> Cadastrar</button>
+                                <a class="junte-se" href="index.html">Já tem uma conta?
+                                    <span>Entre agora mesmo!</span></a>
+                            </div>
+                       <!--</form>--> 
+                    </div>
+                </div>
+                <class class="cont_folhas">
+                    <img src="./assets/folhas.png" alt="folhasdevinheira"
+                        class="folhas folhas_opacidade folhas_rotate">
+                        <img src="./assets/folhas.png" alt="folhasdevinheira" class="folhas folhas_rotate">
+                </class>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+<script src="API/create.js"></script>
+</html>

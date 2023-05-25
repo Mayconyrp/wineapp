@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Previsão do Tempo</title>
+</head>
+
+<body>
+    <main>
+        <div class="content">
+
+            <div class="container">
+                
+                <div class="cont_folhas">
+                    <img src="./assets/folhas.png" alt="folhasdevinheira" class="folhas folhas_esquerda">
+                    <img src="./assets/folhas.png" alt="folhasdevinheira"
+                        class="folhas folhas_esquerda folhas_opacidade">
+                </div>
+                <div class="card2">
+                    <div class="img_logo">
+                        <img class="logo" src="/css/fotos/LogoWineYardsAPP.png" alt="">
+                    </div>
+                    
+                    <div class="imputs">
+                        <h1>Previsão do Tempo</h1><br><br>
+                        <form>  
+                            <label for="city">Digite o nome da cidade:</label>
+                            <input type="text" id="city" name="city">
+                            <button type="submit">Buscar</button>
+                            <div id="weather"></div>
+
+                        </form>
+                    </div>
+                </div>
+                <class class="cont_folhas">
+                    <img src="./assets/folhas.png" alt="folhasdevinheira"
+                        class="folhas folhas_opacidade folhas_rotate">
+                        <img src="./assets/folhas.png" alt="folhasdevinheira" class="folhas folhas_rotate">
+                </class>
+            </div>
+
+        </div>
+
+        <div id="weather"></div>
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="app.js"></script>
+</body>
+
+</html>

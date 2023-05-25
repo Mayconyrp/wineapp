@@ -1,0 +1,15 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "inicializar o terminal do server.js com 'npm start'",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Maycon",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}
